@@ -64665,7 +64665,7 @@
             fontWeight: 'normal'
           },
           format: rec => {
-            return '$' + Number(rec).toFixed(2);
+            return '$' + Number(rec).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); //千位分隔符并强制保留两位小数
           },
           style: {
             padding: [16, 28, 16, 28],
