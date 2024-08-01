@@ -61,6 +61,10 @@
 		&nbsp;&nbsp;
 		<router-link to="/drillDown">下钻上钻</router-link>
 		&nbsp;&nbsp;
+		<router-link to="/analysis">三级row菜单</router-link>
+		&nbsp;&nbsp;
+		<router-link to="/analysis1">三级row菜单1</router-link>
+		&nbsp;&nbsp;
 		<span @click="goback()">返回</span>
 	</div>
 	<div style="margin-top:15px;">
