@@ -91,6 +91,7 @@ const columns = [
     title: 'name',
     cellType: 'link',
     templateLink: 'https://www.baidu.com/s?wd={name}',
+   // templateLink: 'http://localhost:3000/#/PivotTable_page', 
     linkJump: true,
     width:100
   },

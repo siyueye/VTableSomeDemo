@@ -93,6 +93,9 @@
 
 const option = {
   records: data,
+  select:{
+    headerSelectMode:'cell' 
+  },
   rows: [
     {
       dimensionKey: 'Category',
@@ -268,13 +271,16 @@ const newData = [
   
   onMounted(() => {
     tableInstance.value = new PivotTable(pivotTableRef.value, option);
+
   
     tableInstance.value.on('drillmenu_click', args => {
         if (args.drillDown) {
             if (args.dimensionKey === 'Category') {
-                debugger 
-                console.log(args.col);
-                console.log(args.row);
+                //debugger 
+                console.log(args)
+               //console.log(args.col);
+               // console.log(args.row);
+              
             tableInstance.value.updateOption({
                 records: newData,
                 rows: [
@@ -471,9 +477,20 @@ const newData = [
             }
         }
         });
-    tableInstance.value.on("click_cell", (params) => {
-      console.log(params);
-    });
+    // tableInstance.value.on("click_cell", (params) => {
+    //   debugger
+    //   console.log(params)
+    //   const newArrs = data.filter(item =>item.Region ==='South' && item.Category === 'Furniture');
+    
+    // console.log(newArrs);
+    // });
+
+    tableInstance.value.on("click_cell", (args) => {
+      debugger
+                    const { col, row, field } = args
+                    let record = tableInstance.value.getRecordByCell(col, row) //获取当前行数据
+                    console.log(record)
+                })
   });
   </script>
   

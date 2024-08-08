@@ -30,6 +30,7 @@ const routes = [
 	{ path : '/sortEltable'     , name : "sortEltable",  component : ()=> import("./pages/sortEltable.vue")  },
 	{ path : '/filterEltable'     , name : "filterEltable",  component : ()=> import("./pages/filterEltable.vue")  },
 	{ path : '/drillDown'     , name : "drillDown",  component : ()=> import("./pages/drillDown.vue")  },
+	{ path : '/treeStructure'     , name : "treeStructure",  component : ()=> import("./pages/treeStructure.vue")  },	
 	{ 
 		path       : '/About', 
 		name       : "About", 

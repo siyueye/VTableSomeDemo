@@ -285,8 +285,8 @@
   ];
   
   const option = {
-    rows: ["province", "city"],//行表头对应各级维度的样式及format配置。
-    columns: ["category", "sub_category"],//列表头对应各级维度的样式及format配置。
+    columns : ["province", "city"],//行表头对应各级维度的样式及format配置。
+    rows: ["category", "sub_category"],//列表头对应各级维度的样式及format配置。
     indicators: ["sales", "number"],//透视表中各个指标的具体配置。
     enableDataAnalysis: true,
     indicatorTitle: "指标名称",//指标标题，显示在角头位置的标题。

@@ -2,7 +2,7 @@
    <div>
     <div ref="listTableRef" style="width: 1580px; height: 800px"></div>
     <a-space direction="vertical" size="large">
-        <a-pagination :total="option.records.length" :current="option.pagination.currentPage" :size="medium" :page-size="option.pagination.perPageCount" show-total show-jumper show-page-size 
+        <a-pagination  :current="option.pagination.currentPage" :size="medium" :page-size="option.pagination.perPageCount"  show-jumper show-page-size show-total :total="option.records.length"
          @change="onPageChange" @page-size-change="onPageSizeChange"/> 
          <!-- <a-pagination :total="option.records.length" :current=1 :size="medium" :page-size=10 show-total show-jumper show-page-size 
          @change="onPageChange" @page-size-change="onPageSizeChange"/> -->

@@ -85,6 +85,7 @@ const option = {
   columns,
   widthMode:'standard',
   customMergeCell: (col, row, table) => {
+    console.log(table)
     if (col > 0 && col < 8 && row > 7 && row < 11) {
       return {
         text: 'long long long long long long long long long long long long long long long long long long text!',
