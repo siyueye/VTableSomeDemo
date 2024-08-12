@@ -9,6 +9,7 @@ const routes = [
 	{ path : '/RenderingEltable2'     , name : "RenderingEltable2",  component : ()=> import("./pages/RenderingEltable2.vue")  },
 	{ path : '/PivotTable'     , name : "PivotTable",  component : ()=> import("./pages/PivotTable.vue")  },
 	{ path : '/PivotTable_page'     , name : "PivotTable_page",  component : ()=> import("./pages/PivotTable_page.vue")  },
+	{ path : '/PivotTable_page1'     , name : "PivotTable_page1",  component : ()=> import("./pages/PivotTable_page1.vue")  },
 	{ path : '/PivotTableTree'     , name : "PivotTableTree",  component : ()=> import("./pages/PivotTableTree.vue")  },
 	{ path : '/ListTableTree'     , name : "ListTableTree",  component : ()=> import("./pages/ListTableTree.vue")  },
 	{ path : '/PivotChart'     , name : "PivotChart",  component : ()=> import("./pages/PivotChart.vue")  },

@@ -8,6 +8,7 @@
 		&nbsp;&nbsp;
 		<router-link to="/PivotTable">跳转-PivotTable</router-link>
 		<router-link to="/PivotTable_page">跳转-PivotTable（分页）</router-link>
+		<router-link to="/PivotTable_page1">跳转-PivotTable（arco带分页）</router-link>
 		&nbsp;&nbsp;
 		<router-link to="/PivotChart">跳转-PivotChart</router-link>
 		&nbsp;&nbsp;

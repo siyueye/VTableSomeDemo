@@ -175,9 +175,11 @@ const columns = [
   }
   function onPageChange(current){
       debugger
+      console.log(current)
       tableInstance.value.updatePagination({
         currentPage: current-1
     });
+    option.pagination.currentPage=current;
       console.log("bbb"+current)
   }
   onMounted(() => {

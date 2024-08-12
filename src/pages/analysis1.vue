@@ -15,7 +15,8 @@ const records = [
         "S_NORMITEM3": "支小再贷款",
         "S_LAYERITEM1": "利息",
         "S_LAYERITEM2": "应计单利",
-        "F_AMT": 33564165.63
+        "F_AMT": 33564165.63,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "河北银行",
@@ -23,7 +24,8 @@ const records = [
         "S_NORMITEM3": "支小再贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "河北银行",
@@ -31,7 +33,8 @@ const records = [
         "S_NORMITEM3": "支小再贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": 3150680000
+        "F_AMT": 3150680000,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "河北银行",
@@ -39,7 +42,8 @@ const records = [
         "S_NORMITEM3": "支小再贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": 3150680000
+        "F_AMT": 3150680000,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "河北银行",
@@ -47,7 +51,8 @@ const records = [
         "S_NORMITEM3": "支小再贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -55,7 +60,8 @@ const records = [
         "S_NORMITEM3": "支农再贷款",
         "S_LAYERITEM1": "利息",
         "S_LAYERITEM2": "应计单利",
-        "F_AMT": 59017476.94
+        "F_AMT": 59017476.94,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -63,7 +69,8 @@ const records = [
         "S_NORMITEM3": "支农再贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": 255704000
+        "F_AMT": 255704000,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -71,7 +78,8 @@ const records = [
         "S_NORMITEM3": "支农再贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": 255704000
+        "F_AMT": 255704000,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -79,7 +87,8 @@ const records = [
         "S_NORMITEM3": "流动性贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": 25485353.69
+        "F_AMT": 25485353.69,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -87,7 +96,8 @@ const records = [
         "S_NORMITEM3": "流动性贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": 25485353.69
+        "F_AMT": 25485353.69,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -95,7 +105,8 @@ const records = [
         "S_NORMITEM3": "金融稳定贷款",
         "S_LAYERITEM1": "利息",
         "S_LAYERITEM2": "应计单利",
-        "F_AMT": 493161.67
+        "F_AMT": 493161.67,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -103,7 +114,8 @@ const records = [
         "S_NORMITEM3": "金融稳定贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -111,7 +123,8 @@ const records = [
         "S_NORMITEM3": "金融稳定贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -119,7 +132,8 @@ const records = [
         "S_NORMITEM3": "流动性贷款",
         "S_LAYERITEM1": "利息",
         "S_LAYERITEM2": "应计单利",
-        "F_AMT": 662619.19
+        "F_AMT": 662619.19,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -127,7 +141,8 @@ const records = [
         "S_NORMITEM3": "流动性贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -135,7 +150,8 @@ const records = [
         "S_NORMITEM3": "支农再贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": 6039112400
+        "F_AMT": 6039112400,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -143,7 +159,8 @@ const records = [
         "S_NORMITEM3": "流动性贷款",
         "S_LAYERITEM1": "展期",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -151,7 +168,8 @@ const records = [
         "S_NORMITEM3": "支农再贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": 6039112400
+        "F_AMT": 6039112400,
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -159,7 +177,8 @@ const records = [
         "S_NORMITEM3": "金融稳定贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期末数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     },
     {
         "S_NORMITEM1": "信用社",
@@ -167,7 +186,8 @@ const records = [
         "S_NORMITEM3": "金融稳定贷款",
         "S_LAYERITEM1": "账户余额",
         "S_LAYERITEM2": "期初数",
-        "F_AMT": ""
+        "F_AMT": "",
+        "otherParam":"",
     }
 ];
 const rowTree =  [
@@ -293,12 +313,44 @@ const option = {
     rowHierarchyType: 'tree',
     widthMode: 'standard'
   };
+  function filterJsonArray(jsonArray, filterJson) {
+    var resultArray = [];
+    jsonArray.forEach(function(val,index,args){
+      var match = true;
+      Object.keys(filterJson).forEach((key)=>
+        {
+          if(filterJson[key]!== val[key]){
+            match = false;
+        }
+      })
+      if (match) {
+        resultArray.push(val);
+      }
+      });
+    return resultArray;
+}
 
 onMounted(() => {
   tableInstance.value = new PivotTable(pivotTableRef.value, option);
 
-  tableInstance.value.on("click_cell", (params) => {
-    console.log(params);
+  tableInstance.value.on("click_cell", (args) => {
+    debugger
+    var selHeadJason = {};
+    
+      args.cellHeaderPaths.rowHeaderPaths.forEach(function(val,index,args){
+      if(val.dimensionKey!=undefined){
+        selHeadJason[`${val.dimensionKey}`] = val.value
+      }
+      });
+      args.cellHeaderPaths.colHeaderPaths.forEach(function(val,index,args){
+      if(val.dimensionKey!=undefined){
+        selHeadJason[`${val.dimensionKey}`] = val.value
+      }
+
+      });
+
+      const conArr = filterJsonArray(records,selHeadJason);
+      console.log(conArr)
   });
 });
 </script>
