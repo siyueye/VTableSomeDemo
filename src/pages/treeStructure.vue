@@ -950,35 +950,26 @@ const option = {
       headerStyle: {
         fontWeight: 'normal'
       },
-      format: value => {
-        if (value) return '$' + Number(value).toFixed(2);
-        return '';
-      },
-      customLayout(args){
-       // const newArrs = data.filter(item =>item.Region ==='South' && item.Category === 'Furniture');
-                        const { col, row, table } = args
-                        const { height, width } = table.getCellRect(col, row)
-                        const record = table.getRecordByCell(col, row);
-                        const container = new VTable.CustomLayout.Group({
-                            height,
-                            width,
-                            display: 'flex',
-                            flexDirection: 'row',
-                            flexWrap: 'nowrap',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        })
-                        const bloggerName = new VTable.CustomLayout.Text({
-                          //  text: record0===null ? null :(record0.orientation==='south'?record0.salesNum:0),
-                           text: record!=undefined?(record[0].orientation==='South'?'*'+record[0].salesNum:'%'+record[0].salesNum):args.dataValue,
-                            fontSize: 13,
-                            textAlign: 'center',
-                        })
-                        container.add(bloggerName)
-                        return {
-                            rootContainer: container,
-                        }
-                    },
+      format: (value, col, row, table) => {
+        if(value!=null){
+          console.log(value+","+col+","+row+",")
+          console.log(table)
+          const headerPaths = table.getCellHeaderPaths(col, row)
+          const weidu = headerPaths.colHeaderPaths[0].value
+          if(weidu==='West'){
+            return '%'+Number(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+          }else if(weidu==='South'){
+            return '@'+Number(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+          }else if(weidu==='Central'){
+            return '#'+Number(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+          }else {
+            return '$'+Number(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+          }
+          
+        }
+        
+ },
+          
       style: {
         padding: [16, 28, 16, 28],
         color(args) {
@@ -988,7 +979,7 @@ const option = {
           return 'red';
         }
       }
-    },
+    } ,
     {
       indicatorKey: '230627170530022',
       title: 'Profit',
@@ -1005,8 +996,80 @@ const option = {
           return 'red';
         }
       }
-    }
+    },
+   
   ],
+  // indicators: [
+  //   {
+  //     indicatorKey: 'salesNum',
+  //     title: 'Sales',
+  //     width: 'auto',
+  //     showSort: false,
+  //     headerStyle: {
+  //       fontWeight: 'normal'
+  //     },
+  //     // format: value => {
+  //     //   if (value) return '$' + Number(value).toFixed(2);
+  //     //   return '';
+  //     // },
+  //     format: rec => {
+  //           return '$' + Number(rec).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); //千位分隔符并强制保留两位小数
+  //         },
+  //     customLayout(args){
+  //      // const newArrs = data.filter(item =>item.Region ==='South' && item.Category === 'Furniture');
+  //                       const { col, row, table } = args
+  //                       const { height, width } = table.getCellRect(col, row)
+  //                       const record = table.getRecordByCell(col, row);
+  //                       const container = new VTable.CustomLayout.Group({
+  //                           height,
+  //                           width:140,
+  //                           //width: 'auto',
+  //                           display: 'flex',
+  //                           flexDirection: 'row',
+  //                           flexWrap: 'nowrap',
+  //                           alignItems: 'center',
+  //                           justifyContent: 'center',
+  //                       })
+  //                       const bloggerName = new VTable.CustomLayout.Text({
+  //                         //  text: record0===null ? null :(record0.orientation==='south'?record0.salesNum:0),
+  //                        //  text: record!=undefined?(record[0].orientation==='South'?'*'+record[0].salesNum:'%'+record[0].salesNum):args.dataValue,
+  //                        text: record!=undefined?(record[0].orientation==='South'?Number(args.dataValue).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'):args.dataValue.replace(/(\d)(?=(\d{3})+\.)/g, '$1,')):args.dataValue,
+  //                           fontSize: 13,
+  //                           textAlign: 'center',
+  //                       })
+  //                       container.add(bloggerName)
+  //                       return {
+  //                           rootContainer: container,
+  //                       }
+  //                   },
+  //     style: {
+  //       padding: [16, 28, 16, 28],
+  //       color(args) {
+  //          //console.log(args)
+  //          //console.log(args.dataValue+',colHeaderPaths：'+args.cellHeaderPaths.colHeaderPaths[0].value+','+args.cellHeaderPaths.colHeaderPaths[1].value+',rowHeaderPaths：'+args.cellHeaderPaths.rowHeaderPaths[0].value)
+  //         if (args.dataValue >= 0) return 'black';
+  //         return 'red';
+  //       }
+  //     }
+  //   },
+  //   {
+  //     indicatorKey: '230627170530022',
+  //     title: 'Profit',
+  //     width: 'auto',
+  //     showSort: false,
+  //     headerStyle: {
+  //       fontWeight: 'normal'
+  //     },
+      
+  //     style: {
+  //       padding: [16, 28, 16, 28],
+  //       color(args) {
+  //         if (args.dataValue >= 0) return 'black';
+  //         return 'red';
+  //       }
+  //     }
+  //   }
+  // ],
   corner: {
     titleOnDimension: 'row',
     headerStyle: {
@@ -1020,6 +1083,8 @@ const option = {
 };
 
   onMounted(() => {
+    var num1 = 0;
+    console.log(num1.toFixed(2))
   tableInstance.value = new PivotTable(pivotTableRef.value, option);
   tableInstance.value.on("click_cell", (params) => {
     debugger

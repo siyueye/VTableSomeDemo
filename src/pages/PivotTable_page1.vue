@@ -304,7 +304,7 @@
       sortRules:[
         {
           sortField: 'sales',
-          sortType: 'desc',
+          sortType: 'DESC',
          },
          
       ],
