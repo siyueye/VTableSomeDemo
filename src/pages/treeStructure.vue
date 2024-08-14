@@ -1017,6 +1017,7 @@ const option = {
   //     format: rec => {
   //           return '$' + Number(rec).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); //千位分隔符并强制保留两位小数
   //         },
+  //自定义样式
   //     customLayout(args){
   //      // const newArrs = data.filter(item =>item.Region ==='South' && item.Category === 'Furniture');
   //                       const { col, row, table } = args
