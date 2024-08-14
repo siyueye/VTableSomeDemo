@@ -956,6 +956,8 @@ const option = {
           console.log(table)
           const headerPaths = table.getCellHeaderPaths(col, row)
           const weidu = headerPaths.colHeaderPaths[0].value
+          const orgRcd = table.getCellOriginRecord(col, row)
+          console.log(orgRcd)
           if(weidu==='West'){
             return '%'+Number(value).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
           }else if(weidu==='South'){
