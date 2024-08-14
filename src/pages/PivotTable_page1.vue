@@ -309,6 +309,7 @@
          
       ],
     },
+    //rowHierarchyType:'tree',
   };
   function onPageSizeChange(pageSize){
     debugger
@@ -328,12 +329,18 @@
     option.pagination.currentPage=current;
       console.log("bbb"+current)
   }
+//跳转方法
+const viewRecords=(param)=>
+{
+  const url = router.resolve({path:'/manage/totaltraffic1', query: {vrId: id}}).hrefwindow.open(url);
+}
 
   onMounted(() => {
     tableInstance.value = new PivotTable(pivotTableRef.value, option.value);
     totalNum.value = option.value.pagination.totalCount;
     tableInstance.value.on("click_cell", (params) => {
       console.log(params);
+
     });
   });
   </script>
