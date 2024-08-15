@@ -1,14 +1,21 @@
 <template>
-    <div ref="listTableRef" style="width: 1580px; height: 800px"></div>
+  <div>
+    <div>
+      <el-button type="text" @click="printWindow()">打印</el-button>
+    </div>
+    <div ref="listTableRef" id ="listTableRef" style="width: 1580px; height: 800px"></div>
+  </div>
   </template>
   
   <script setup>
   import { onMounted, ref, shallowRef } from "vue";
-  import { ListTable } from "@visactor/vtable";
+  import { ListTable } from '@visactor/vtable';
   
   const listTableRef = ref();
   const tableInstance = shallowRef();
   
+ 
+
   function generateRandomString(length) {
   let result = '';
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -36,6 +43,7 @@ function generateRandomHobbies() {
   const numHobbies = Math.floor(Math.random() * 3) + 1; // 生成 1-3 之间的随机整数
   const selectedHobbies = [];
 
+  
   for (let i = 0; i < numHobbies; i++) {
     const randomIndex = Math.floor(Math.random() * hobbies.length);
     const hobby = hobbies[randomIndex];
@@ -141,14 +149,70 @@ const columns = [
     title: 'city',
     width: 150,
   },
+  {
+    field: 'city1',
+    title: 'city1',
+    width: 150,
+  },
+  {
+    field: 'city2',
+    title: 'city2',
+    width: 150,
+  },
+  {
+    field: 'city3',
+    title: 'city3',
+    width: 150,
+  },
+  {
+    field: 'city4',
+    title: 'city4',
+    width: 150,
+  },
+  {
+    field: 'city5',
+    title: 'city5',
+    width: 150,
+  },
+  {
+    field: 'city6',
+    title: 'city6',
+    width: 150,
+  },
+  {
+    field: 'city7',
+    title: 'city7',
+    width: 150,
+  },
+  {
+    field: 'city8',
+    title: 'city8',
+    width: 150,
+  },
 ];
   
   const option = {
     records,
     columns,
     widthMode: "standard",
+    theme:{
+      scrollStyle:{
+        visible:'none'
+      }
+    }
   };
   
+  function printWindow(){
+    debugger
+    const wdt= tableInstance.value.getAllColsWidth();
+    const hight = tableInstance.value.getAllRowsHeight();
+    document.getElementById('listTableRef').style.width = wdt+'px';
+    //document.getElementById('listTableRef').style.height = hight+'px';
+   // window.print();
+     //document.getElementById('listTableRef').style.width = '1580px';
+    //document.getElementById('listTableRef').style.height = '800px';
+  }
+
   onMounted(() => {
     tableInstance.value = new ListTable(listTableRef.value, option);
   
